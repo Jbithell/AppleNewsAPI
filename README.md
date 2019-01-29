@@ -1,6 +1,6 @@
 # AppleNewsAPI
 
-[![Travis CI build status](https://travis-ci.org/chapter-three/AppleNewsAPI.svg?branch=master)](https://travis-ci.org/chapter-three/AppleNewsAPI)
+Forked from https://github.com/chapter-three/AppleNewsAPI but with PRs merged and a few relevant tweaks
 
 `AppleNewsAPI\PublisherAPI` is a PHP library that allows you to publish content to Apple News. You can also retrieve and delete articles you’ve already published, and get basic information about your channel and sections.
 
@@ -11,16 +11,7 @@
 ## Installation
 
 ```shell
-composer require chapter-three/apple-news-api
-```
-
-or
-
-```shell
-git clone git@github.com:chapter-three/AppleNewsAPI.git
-cd AppleNewsAPI
-curl -sS https://getcomposer.org/installer | php
-./composer.phar install
+composer require bithell/apple-news-api
 ```
 
 ## Document class Quick Start and Examples
@@ -150,26 +141,4 @@ $response = $PublisherAPI->delete('/articles/{article_id}',
     'article_id' => ARTICLE_ID
   ]
 );
-```
-
-## Contribute
-
-### Run Unit Tests
-
-```shell
-./vendor/bin/phpunit -v --colors=auto --bootstrap vendor/autoload.php tests
-```
-
-To test PublisherAPI GET/POST/DELETE methods use the following pattern:
-
-```shell
-./vendor/bin/phpunit -v --colors=auto --bootstrap vendor/autoload.php
-tests/PublisherAPITest.php [API_KEY] [API_SECRET] [ENDPOINT_URL] [METHOD] [ENDPOINT_PATH]
-```
-
-### Generate PHPDoc
-
-```shell
-git clone --branch gh-pages git@github.com:chapter-three/AppleNewsAPI.git ../AppleNewsAPI_phpdoc
-./vendor/bin/phpdoc run --title='chapter-three/apple-news-api v'$(cat composer.json | jq -r '.version') -d ./ -i vendor/,tests/ -t ../AppleNewsAPI_phpdoc
 ```
