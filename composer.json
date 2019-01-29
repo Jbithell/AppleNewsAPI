@@ -1,10 +1,10 @@
 {
-    "name" : "chapter-three/apple-news-api",
+    "name" : "bithell/apple-news-api",
     "type": "library",
     "description": "Push content to Apple News.",
     "keywords": ["apple", "push", "news", "api"],
-    "version": "0.3.9",
-    "homepage": "https://github.com/chapter-three/AppleNewsAPI",
+    "version": "1.0.0",
+    "homepage": "https://github.com/jbithell/AppleNewsAPI",
     "license": "MIT",
     "require": {
         "php": ">=5.4.0",
